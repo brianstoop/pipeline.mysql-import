@@ -16,7 +16,10 @@
          displayDetailsOnPhpunitDeprecations="true">
     <testsuites>
         <testsuite name="Import">
-            <directory>../src/Pipeline/Import/MySQL/Tests/</directory>
+            <directory>unit/Import/MySQL/</directory>
+        </testsuite>
+        <testsuite name="Ranges">
+            <directory>unit/Import/MySQL/Ranges/</directory>
         </testsuite>
     </testsuites>
     <coverage>
@@ -32,8 +35,5 @@
         <include>
             <directory>../src/Pipeline/</directory>
         </include>
-        <exclude>
-            <directory>../src/Pipeline/Import/MySQL/Tests/</directory>
-        </exclude>
     </source>
 </phpunit>
