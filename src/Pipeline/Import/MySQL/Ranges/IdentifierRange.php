@@ -28,7 +28,7 @@ class IdentifierRange extends AbstractRange
      * Constructor.
      *
      * @param LoggerInterface $logger Shared instance of a logger class
-     * @param MySQLTarget   $target Shared instance of the MySQLTarget class
+     * @param MySQLTarget     $target Shared instance of the MySQLTarget class
      */
     public function __construct(LoggerInterface $logger, MySQLTarget $target)
     {
