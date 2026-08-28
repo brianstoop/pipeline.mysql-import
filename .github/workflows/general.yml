@@ -5,9 +5,13 @@ name: General Tests
 on: [push, pull_request, workflow_dispatch]
 
 jobs:
+  ec-checker:
+    uses: lunr-php/actions-templates/.github/workflows/ec-checker.yml@53e01c4c30d98b283a227f33c2312afa1eada96c # 0.14.3
+    with:
+      excludes: '.*\.php$'
   reuse:
-    uses: lunr-php/actions-templates/.github/workflows/reuse.yml@master
+    uses: lunr-php/actions-templates/.github/workflows/reuse.yml@53e01c4c30d98b283a227f33c2312afa1eada96c # 0.14.3
   typos:
-    uses: lunr-php/actions-templates/.github/workflows/typos.yml@master
+    uses: lunr-php/actions-templates/.github/workflows/typos.yml@53e01c4c30d98b283a227f33c2312afa1eada96c # 0.14.3
     with:
       config: tests/typos.toml
