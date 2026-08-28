@@ -18,10 +18,10 @@
 >
     <testsuites>
         <testsuite name="Import">
-            <directory>tests/unit/Import/MariaDB/</directory>
+            <directory>tests/unit/Import/MySQL/</directory>
         </testsuite>
         <testsuite name="Ranges">
-            <directory>tests/unit/Import/MariaDB/Ranges/</directory>
+            <directory>tests/unit/Import/MySQL/Ranges/</directory>
         </testsuite>
     </testsuites>
     <coverage>
