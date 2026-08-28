@@ -506,7 +506,7 @@ class MySQLTarget extends MySQLAccessObject implements ImportTargetInterface
 
         $columns = array_keys($escaped[0][0]);
 
-        $updateColumns = array_map(function ($a) { return "`$a` = VALUES (`$a`)"; }, $columns);
+        $updateColumns = array_map(function ($a) { return "`$a` = `new`.`$a`"; }, $columns);
 
         $rows = 0;
 
@@ -517,6 +517,7 @@ class MySQLTarget extends MySQLAccessObject implements ImportTargetInterface
             $builder->into($this->table)
                     ->column_names($columns)
                     ->values($batch)
+                    ->row_alias('new')
                     ->on_duplicate_key_update(implode(', ', $updateColumns));
 
             $result = $this->db->query($builder->get_insert_query());
